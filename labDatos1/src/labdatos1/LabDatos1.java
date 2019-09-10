@@ -8,14 +8,14 @@ package labdatos1;
 /**
  *
  * @author Jack Howard Ortega
- */esto es un cambio
+ */
 public class LabDatos1 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("hola");
     }
     
 }

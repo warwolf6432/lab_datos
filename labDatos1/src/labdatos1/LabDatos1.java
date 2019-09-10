@@ -8,7 +8,7 @@ package labdatos1;
 /**
  *
  * @author Jack Howard Ortega
- */
+ */esto es un cambio
 public class LabDatos1 {
 
     /**

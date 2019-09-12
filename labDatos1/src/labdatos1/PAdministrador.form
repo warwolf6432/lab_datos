@@ -116,6 +116,7 @@
         <Property name="text" type="java.lang.String" value="ingrese contrase&#xf1;a"/>
       </Properties>
     </Component>
+<<<<<<< HEAD
     <Component class="javax.swing.JButton" name="btacceptar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ingresar"/>
@@ -133,6 +134,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pwdActionPerformed"/>
       </Events>
+=======
+    <Component class="javax.swing.JPasswordField" name="pwd">
+>>>>>>> c20d8e413310a99745e27c97d991bb2977b6fee3
     </Component>
   </SubComponents>
 </Form>

@@ -34,8 +34,11 @@ public class PAdministrador extends javax.swing.JFrame {
         BRegistrar = new javax.swing.JButton();
         Baddsala = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+<<<<<<< HEAD
         btacceptar = new javax.swing.JButton();
         accepted = new javax.swing.JTextField();
+=======
+>>>>>>> c20d8e413310a99745e27c97d991bb2977b6fee3
         pwd = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -66,6 +69,7 @@ public class PAdministrador extends javax.swing.JFrame {
 
         jLabel1.setText("ingrese contraseña");
 
+<<<<<<< HEAD
         btacceptar.setText("Ingresar");
         btacceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,6 +85,8 @@ public class PAdministrador extends javax.swing.JFrame {
             }
         });
 
+=======
+>>>>>>> c20d8e413310a99745e27c97d991bb2977b6fee3
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -132,15 +138,19 @@ public class PAdministrador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BRegistrarActionPerformed
-        String admi = "admin";
-        String pwde = pwd.getText();
+        
+        String pwde = this.pwd.getText();
        
-        if(pwde.equals(admi)){
+        if(pwde.equals("admin")){
             PRegistrarse abrir = new PRegistrarse();
         abrir.setVisible(true);
         this.dispose();
         }else{
+
             JOptionPane.showMessageDialog(null, "contraseña incorrecta ");
+
+            JOptionPane.showMessageDialog(this ,"No ingreso contraseña correcta");
+
         }
         
         
@@ -148,25 +158,41 @@ public class PAdministrador extends javax.swing.JFrame {
     }//GEN-LAST:event_BRegistrarActionPerformed
 
     private void BaddsalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaddsalaActionPerformed
+
        String adpas = "admin";
        String pas = pwd.getText();
         if(pas.equals(adpas)){
+
+        String pwde = this.pwd.getText();
+        if(pwde.equals("admin")){
+
         PCrearSalas abrir = new PCrearSalas();
         abrir.setVisible(true);
         this.dispose();
-    }
+    }else{
+            JOptionPane.showMessageDialog(this, "No ingreso contraseña correcta");
+        }
     }//GEN-LAST:event_BaddsalaActionPerformed
 
     private void BEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BEliminarActionPerformed
+
         String adpas = "admin";
         String pas = pwd.getText();
         if(pas.equals(adpas)){
             
+
+        String pwde = this.pwd.getText();
+        
+        if(pwde.equals("admin")){
+
         PEliminarsala abrir =new PEliminarsala();
         abrir.setVisible(true);
         this.dispose();
+        }else{
+            JOptionPane.showMessageDialog(this, "No ingreso contraseña correcta");
         }
     }//GEN-LAST:event_BEliminarActionPerformed
+
 
     private void btacceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btacceptarActionPerformed
        String pas = pwd.getText();
@@ -183,6 +209,8 @@ public class PAdministrador extends javax.swing.JFrame {
     private void pwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_pwdActionPerformed
+
+
 
     /**
      * @param args the command line arguments

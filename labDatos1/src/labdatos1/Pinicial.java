@@ -106,7 +106,8 @@ public class Pinicial extends javax.swing.JFrame {
         
         String usuario = LUsuario.getText(); 
         
-        
+        PAdministrador abrir=new PAdministrador();
+        abrir.setVisible(true);
         
         
         

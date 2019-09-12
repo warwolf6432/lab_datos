@@ -5,6 +5,8 @@
  */
 package labdatos1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Jack Howard Ortega
@@ -30,7 +32,7 @@ public class Pinicial extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         Blogin = new javax.swing.JButton();
-        Dir = new javax.swing.JComboBox<>();
+        userlogin = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,10 +49,10 @@ public class Pinicial extends javax.swing.JFrame {
             }
         });
 
-        Dir.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "seleccione ", "Estudiante", "Profesor", "Administracion" }));
-        Dir.addActionListener(new java.awt.event.ActionListener() {
+        userlogin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "seleccione ", "Estudiante", "Profesor", "Administracion" }));
+        userlogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DirActionPerformed(evt);
+                userloginActionPerformed(evt);
             }
         });
 
@@ -71,10 +73,10 @@ public class Pinicial extends javax.swing.JFrame {
                         .addGap(136, 136, 136)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Blogin, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel3)
-                                .addComponent(LUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Dir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(LUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+                                .addComponent(userlogin, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap(104, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -89,7 +91,7 @@ public class Pinicial extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(LUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(Dir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(userlogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addComponent(Blogin)
                 .addGap(80, 80, 80))
@@ -98,18 +100,28 @@ public class Pinicial extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void DirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DirActionPerformed
+    private void userloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userloginActionPerformed
+        //user login variable extraction
+        
+    }//GEN-LAST:event_userloginActionPerformed
 
     private void BloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BloginActionPerformed
         
-        String usuario = LUsuario.getText(); 
+        String usuario = LUsuario.getText();
+        String Choice = userlogin.getSelectedItem().toString();
+        String adm ="Administracion";
+       
+        
+        
+        if(Choice.equals(adm)){
+        PAdministrador abrir=new PAdministrador();
+        abrir.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(null, "No ingreso usuario");
         
         
         
-        
-        
+        }  
     }//GEN-LAST:event_BloginActionPerformed
 
     /**
@@ -149,10 +161,10 @@ public class Pinicial extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Blogin;
-    private javax.swing.JComboBox<String> Dir;
     private javax.swing.JTextField LUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JComboBox<String> userlogin;
     // End of variables declaration//GEN-END:variables
 }

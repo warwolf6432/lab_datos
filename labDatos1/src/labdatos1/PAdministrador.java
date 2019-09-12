@@ -40,6 +40,7 @@ public class PAdministrador extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("admin");
+        setPreferredSize(new java.awt.Dimension(750, 250));
 
         jLabel5.setText("Administrador");
 

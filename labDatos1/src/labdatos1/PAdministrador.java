@@ -34,7 +34,7 @@ public class PAdministrador extends javax.swing.JFrame {
         BRegistrar = new javax.swing.JButton();
         Baddsala = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        pwd = new javax.swing.JTextField();
+        pwd = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("admin");
@@ -63,13 +63,6 @@ public class PAdministrador extends javax.swing.JFrame {
         });
 
         jLabel1.setText("ingrese contraseña");
-
-        pwd.setText(" ");
-        pwd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pwdActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -118,15 +111,15 @@ public class PAdministrador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BRegistrarActionPerformed
-        String admi = "admin";
-        String pwde = pwd.getText();
+        
+        String pwde = this.pwd.getText();
        
-        if(pwde.equals(admi)){
+        if(pwde.equals("admin")){
             PRegistrarse abrir = new PRegistrarse();
         abrir.setVisible(true);
         this.dispose();
         }else{
-            JOptionPane.showMessageDialog(null, "No ingreso contraseña");
+            JOptionPane.showMessageDialog(this ,"No ingreso contraseña correcta");
         }
         
         
@@ -134,24 +127,27 @@ public class PAdministrador extends javax.swing.JFrame {
     }//GEN-LAST:event_BRegistrarActionPerformed
 
     private void BaddsalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaddsalaActionPerformed
-        if(pwd.equals("admin")){
+        String pwde = this.pwd.getText();
+        if(pwde.equals("admin")){
         PCrearSalas abrir = new PCrearSalas();
         abrir.setVisible(true);
         this.dispose();
-    }
+    }else{
+            JOptionPane.showMessageDialog(this, "No ingreso contraseña correcta");
+        }
     }//GEN-LAST:event_BaddsalaActionPerformed
 
     private void BEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BEliminarActionPerformed
-        if(pwd.equals("admin")){
+        String pwde = this.pwd.getText();
+        
+        if(pwde.equals("admin")){
         PEliminarsala abrir =new PEliminarsala();
         abrir.setVisible(true);
         this.dispose();
+        }else{
+            JOptionPane.showMessageDialog(this, "No ingreso contraseña correcta");
         }
     }//GEN-LAST:event_BEliminarActionPerformed
-
-    private void pwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdActionPerformed
-        
-    }//GEN-LAST:event_pwdActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,6 +190,6 @@ public class PAdministrador extends javax.swing.JFrame {
     private javax.swing.JButton Baddsala;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField pwd;
+    private javax.swing.JPasswordField pwd;
     // End of variables declaration//GEN-END:variables
 }

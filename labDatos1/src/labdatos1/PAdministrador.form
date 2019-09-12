@@ -111,13 +111,7 @@
         <Property name="text" type="java.lang.String" value="ingrese contrase&#xf1;a"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="pwd">
-      <Properties>
-        <Property name="text" type="java.lang.String" value=" "/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pwdActionPerformed"/>
-      </Events>
+    <Component class="javax.swing.JPasswordField" name="pwd">
     </Component>
   </SubComponents>
 </Form>

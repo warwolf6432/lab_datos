@@ -34,11 +34,8 @@ public class PAdministrador extends javax.swing.JFrame {
         BRegistrar = new javax.swing.JButton();
         Baddsala = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-<<<<<<< HEAD
         btacceptar = new javax.swing.JButton();
         accepted = new javax.swing.JTextField();
-=======
->>>>>>> c20d8e413310a99745e27c97d991bb2977b6fee3
         pwd = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -69,7 +66,6 @@ public class PAdministrador extends javax.swing.JFrame {
 
         jLabel1.setText("ingrese contraseña");
 
-<<<<<<< HEAD
         btacceptar.setText("Ingresar");
         btacceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,14 +75,6 @@ public class PAdministrador extends javax.swing.JFrame {
 
         accepted.setEditable(false);
 
-        pwd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pwdActionPerformed(evt);
-            }
-        });
-
-=======
->>>>>>> c20d8e413310a99745e27c97d991bb2977b6fee3
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -94,23 +82,24 @@ public class PAdministrador extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(151, 151, 151)
-                        .addComponent(jLabel5))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(126, 126, 126)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(BRegistrar)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(Baddsala, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(38, 38, 38)
+                            .addComponent(BEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(38, 38, 38))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel5)
+                        .addGap(70, 70, 70)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btacceptar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(accepted)
                     .addComponent(pwd))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,7 +109,7 @@ public class PAdministrador extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BRegistrar)
                     .addComponent(pwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -138,19 +127,15 @@ public class PAdministrador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BRegistrarActionPerformed
-        
-        String pwde = this.pwd.getText();
+        String admi = "admin";
+        String pwde = pwd.getText();
        
-        if(pwde.equals("admin")){
+        if(pwde.equals(admi)){
             PRegistrarse abrir = new PRegistrarse();
         abrir.setVisible(true);
         this.dispose();
         }else{
-
             JOptionPane.showMessageDialog(null, "contraseña incorrecta ");
-
-            JOptionPane.showMessageDialog(this ,"No ingreso contraseña correcta");
-
         }
         
         
@@ -158,41 +143,25 @@ public class PAdministrador extends javax.swing.JFrame {
     }//GEN-LAST:event_BRegistrarActionPerformed
 
     private void BaddsalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaddsalaActionPerformed
-
        String adpas = "admin";
        String pas = pwd.getText();
         if(pas.equals(adpas)){
-
-        String pwde = this.pwd.getText();
-        if(pwde.equals("admin")){
-
         PCrearSalas abrir = new PCrearSalas();
         abrir.setVisible(true);
         this.dispose();
-    }else{
-            JOptionPane.showMessageDialog(this, "No ingreso contraseña correcta");
-        }
+    }
     }//GEN-LAST:event_BaddsalaActionPerformed
 
     private void BEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BEliminarActionPerformed
-
         String adpas = "admin";
         String pas = pwd.getText();
         if(pas.equals(adpas)){
             
-
-        String pwde = this.pwd.getText();
-        
-        if(pwde.equals("admin")){
-
         PEliminarsala abrir =new PEliminarsala();
         abrir.setVisible(true);
         this.dispose();
-        }else{
-            JOptionPane.showMessageDialog(this, "No ingreso contraseña correcta");
         }
     }//GEN-LAST:event_BEliminarActionPerformed
-
 
     private void btacceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btacceptarActionPerformed
        String pas = pwd.getText();
@@ -205,12 +174,6 @@ public class PAdministrador extends javax.swing.JFrame {
        }
        
     }//GEN-LAST:event_btacceptarActionPerformed
-
-    private void pwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pwdActionPerformed
-
-
 
     /**
      * @param args the command line arguments

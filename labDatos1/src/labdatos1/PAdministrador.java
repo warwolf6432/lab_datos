@@ -5,6 +5,8 @@
  */
 package labdatos1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Jack Howard Ortega
@@ -116,12 +118,15 @@ public class PAdministrador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BRegistrarActionPerformed
-        
+        String admi = "admin";
+        String pwde = pwd.getText();
        
-        if(pwd.equals("admin")){
+        if(pwde.equals(admi)){
             PRegistrarse abrir = new PRegistrarse();
         abrir.setVisible(true);
         this.dispose();
+        }else{
+            JOptionPane.showMessageDialog(null, "No ingreso contraseña");
         }
         
         

@@ -34,7 +34,9 @@ public class PAdministrador extends javax.swing.JFrame {
         BRegistrar = new javax.swing.JButton();
         Baddsala = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        pwd = new javax.swing.JTextField();
+        btacceptar = new javax.swing.JButton();
+        accepted = new javax.swing.JTextField();
+        pwd = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("admin");
@@ -64,7 +66,15 @@ public class PAdministrador extends javax.swing.JFrame {
 
         jLabel1.setText("ingrese contraseña");
 
-        pwd.setText(" ");
+        btacceptar.setText("Ingresar");
+        btacceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btacceptarActionPerformed(evt);
+            }
+        });
+
+        accepted.setEditable(false);
+
         pwd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pwdActionPerformed(evt);
@@ -78,7 +88,7 @@ public class PAdministrador extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(161, 161, 161)
+                        .addGap(151, 151, 151)
                         .addComponent(jLabel5))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(126, 126, 126)
@@ -90,11 +100,11 @@ public class PAdministrador extends javax.swing.JFrame {
                             .addComponent(BEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(pwd)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btacceptar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(accepted)
+                    .addComponent(pwd))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,9 +118,13 @@ public class PAdministrador extends javax.swing.JFrame {
                     .addComponent(BRegistrar)
                     .addComponent(pwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Baddsala)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Baddsala)
+                    .addComponent(btacceptar))
                 .addGap(11, 11, 11)
-                .addComponent(BEliminar)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BEliminar)
+                    .addComponent(accepted, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
@@ -126,7 +140,7 @@ public class PAdministrador extends javax.swing.JFrame {
         abrir.setVisible(true);
         this.dispose();
         }else{
-            JOptionPane.showMessageDialog(null, "No ingreso contraseña");
+            JOptionPane.showMessageDialog(null, "contraseña incorrecta ");
         }
         
         
@@ -134,7 +148,9 @@ public class PAdministrador extends javax.swing.JFrame {
     }//GEN-LAST:event_BRegistrarActionPerformed
 
     private void BaddsalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaddsalaActionPerformed
-        if(pwd.equals("admin")){
+       String adpas = "admin";
+       String pas = pwd.getText();
+        if(pas.equals(adpas)){
         PCrearSalas abrir = new PCrearSalas();
         abrir.setVisible(true);
         this.dispose();
@@ -142,15 +158,30 @@ public class PAdministrador extends javax.swing.JFrame {
     }//GEN-LAST:event_BaddsalaActionPerformed
 
     private void BEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BEliminarActionPerformed
-        if(pwd.equals("admin")){
+        String adpas = "admin";
+        String pas = pwd.getText();
+        if(pas.equals(adpas)){
+            
         PEliminarsala abrir =new PEliminarsala();
         abrir.setVisible(true);
         this.dispose();
         }
     }//GEN-LAST:event_BEliminarActionPerformed
 
+    private void btacceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btacceptarActionPerformed
+       String pas = pwd.getText();
+       String adpas = "admin";
+       if(pas.equals(adpas)){
+           accepted.setText("Bienvenido");
+           
+       }else{
+           JOptionPane.showMessageDialog(null, "Contraseña incorrecta");
+       }
+       
+    }//GEN-LAST:event_btacceptarActionPerformed
+
     private void pwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdActionPerformed
-        
+        // TODO add your handling code here:
     }//GEN-LAST:event_pwdActionPerformed
 
     /**
@@ -192,8 +223,10 @@ public class PAdministrador extends javax.swing.JFrame {
     private javax.swing.JButton BEliminar;
     private javax.swing.JButton BRegistrar;
     private javax.swing.JButton Baddsala;
+    private javax.swing.JTextField accepted;
+    private javax.swing.JButton btacceptar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField pwd;
+    private javax.swing.JPasswordField pwd;
     // End of variables declaration//GEN-END:variables
 }

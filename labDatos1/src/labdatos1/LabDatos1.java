@@ -14,6 +14,7 @@ import java.util.logging.Logger;
  */
 public class LabDatos1 {
 
+
     /**
      * @param args the command line arguments
      */

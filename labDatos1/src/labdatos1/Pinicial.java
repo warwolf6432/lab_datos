@@ -123,26 +123,30 @@ public class Pinicial extends javax.swing.JFrame {
 
     private void BloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BloginActionPerformed
         
+
         String usuario = LUsuario.getText();
         String Choice = userlogin.getSelectedItem().toString();
         String adm ="Administracion";
         String est ="Estudiante";
         String prof = "Profesor";
        
+
         
         if(Choice.equals(est)){
             PEstudiante abrir=new PEstudiante();
             abrir.setVisible(true);
-            
+            this.dispose();
             }else{
             if(Choice.equals(prof)){
                 PProfesor abrir=new PProfesor();
             abrir.setVisible(true); 
+            this.dispose();
             }else{
         
         if(Choice.equals(adm)){
         PAdministrador abrir=new PAdministrador();
         abrir.setVisible(true);
+        this.dispose();
         }else{
             JOptionPane.showMessageDialog(null, "No ingreso tipo de usuario usuario");
         

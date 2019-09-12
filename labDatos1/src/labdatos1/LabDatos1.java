@@ -13,7 +13,7 @@ import java.util.logging.Logger;
  * @author Jack Howard Ortega
  */
 public class LabDatos1 {
-//mk
+//
     /**
      * @param args the command line arguments
      */

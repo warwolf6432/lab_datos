@@ -30,7 +30,9 @@ public class PAdministrador extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         BEliminar = new javax.swing.JButton();
         BRegistrar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        Baddsala = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        pwd = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("admin");
@@ -38,10 +40,34 @@ public class PAdministrador extends javax.swing.JFrame {
         jLabel5.setText("Administrador");
 
         BEliminar.setText("Eliminar sala");
+        BEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BEliminarActionPerformed(evt);
+            }
+        });
 
         BRegistrar.setText("Registrar Usuarios");
+        BRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BRegistrarActionPerformed(evt);
+            }
+        });
 
-        jButton1.setText("Agregar sala");
+        Baddsala.setText("Agregar sala");
+        Baddsala.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BaddsalaActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("ingrese contraseña");
+
+        pwd.setText(" ");
+        pwd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pwdActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -58,19 +84,29 @@ public class PAdministrador extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(BRegistrar)
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Baddsala, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(BEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(139, Short.MAX_VALUE))
+                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(pwd)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(9, 9, 9)
-                .addComponent(jLabel5)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BRegistrar)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BRegistrar)
+                    .addComponent(pwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(Baddsala)
                 .addGap(11, 11, 11)
                 .addComponent(BEliminar)
                 .addContainerGap(26, Short.MAX_VALUE))
@@ -78,6 +114,39 @@ public class PAdministrador extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BRegistrarActionPerformed
+        
+       
+        if(pwd.equals("admin")){
+            PRegistrarse abrir = new PRegistrarse();
+        abrir.setVisible(true);
+        this.dispose();
+        }
+        
+        
+        
+    }//GEN-LAST:event_BRegistrarActionPerformed
+
+    private void BaddsalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaddsalaActionPerformed
+        if(pwd.equals("admin")){
+        PCrearSalas abrir = new PCrearSalas();
+        abrir.setVisible(true);
+        this.dispose();
+    }
+    }//GEN-LAST:event_BaddsalaActionPerformed
+
+    private void BEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BEliminarActionPerformed
+        if(pwd.equals("admin")){
+        PEliminarsala abrir =new PEliminarsala();
+        abrir.setVisible(true);
+        this.dispose();
+        }
+    }//GEN-LAST:event_BEliminarActionPerformed
+
+    private void pwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdActionPerformed
+        
+    }//GEN-LAST:event_pwdActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,7 +186,9 @@ public class PAdministrador extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BEliminar;
     private javax.swing.JButton BRegistrar;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Baddsala;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JTextField pwd;
     // End of variables declaration//GEN-END:variables
 }

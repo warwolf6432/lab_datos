@@ -117,7 +117,7 @@ public class Pinicial extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void userloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userloginActionPerformed
-        //user login variable extraction
+        
         
     }//GEN-LAST:event_userloginActionPerformed
 

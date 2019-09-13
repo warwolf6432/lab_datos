@@ -56,7 +56,7 @@ public class PRegistrarse extends javax.swing.JFrame {
 
         jButton1.setText("Registrar");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estudiante o Profesor", "Estudiante", "Profesor" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "tipo de usuario", "Estudiante", "Profesor" }));
 
         jLabel5.setText("Foto");
 

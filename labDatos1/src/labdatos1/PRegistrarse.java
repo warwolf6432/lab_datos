@@ -159,11 +159,7 @@ public class PRegistrarse extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void cargarfotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarfotoActionPerformed
-        int resultado;
-        resultado = FC.showOpenDialog(null);
-        if(FC.APPROVE_OPTION==resultado){
-            fotoshow=FC.getSelectedFile();
-        }
+       
     }//GEN-LAST:event_cargarfotoActionPerformed
 
     /**

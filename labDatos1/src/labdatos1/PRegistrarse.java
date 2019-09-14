@@ -170,7 +170,7 @@ File fichero;
               Icon icono = new ImageIcon(icon.getImage().getScaledInstance(lblfoto.getWidth(),lblfoto.getHeight(),Image.SCALE_DEFAULT));
               lblfoto.setText(null);
               lblfoto.setIcon(icono);
-              
+              ventana.setVisible(false);
             }catch(Exception ex){
                 JOptionPane.showMessageDialog(null,"jinkies!! error abriendo la imagen"+ ex);
             }

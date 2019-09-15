@@ -30,7 +30,6 @@ public class PAdministrador extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel5 = new javax.swing.JLabel();
-        BEliminar = new javax.swing.JButton();
         BRegistrar = new javax.swing.JButton();
         Baddsala = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -40,16 +39,8 @@ public class PAdministrador extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("admin");
-        setPreferredSize(new java.awt.Dimension(750, 250));
 
         jLabel5.setText("Administrador");
-
-        BEliminar.setText("Eliminar sala");
-        BEliminar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BEliminarActionPerformed(evt);
-            }
-        });
 
         BRegistrar.setText("Registrar Usuarios");
         BRegistrar.addActionListener(new java.awt.event.ActionListener() {
@@ -58,7 +49,7 @@ public class PAdministrador extends javax.swing.JFrame {
             }
         });
 
-        Baddsala.setText("Agregar sala");
+        Baddsala.setText("Modificar Salas");
         Baddsala.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BaddsalaActionPerformed(evt);
@@ -88,8 +79,7 @@ public class PAdministrador extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(BRegistrar)
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(Baddsala, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(Baddsala, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(38, 38, 38))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
@@ -113,15 +103,14 @@ public class PAdministrador extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BRegistrar)
                     .addComponent(pwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Baddsala)
-                    .addComponent(btacceptar))
-                .addGap(11, 11, 11)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BEliminar)
-                    .addComponent(accepted, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btacceptar)
+                        .addGap(11, 11, 11)
+                        .addComponent(accepted, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Baddsala))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         pack();
@@ -152,17 +141,6 @@ public class PAdministrador extends javax.swing.JFrame {
         this.dispose();
     }
     }//GEN-LAST:event_BaddsalaActionPerformed
-
-    private void BEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BEliminarActionPerformed
-        String adpas = "admin";
-        String pas = pwd.getText();
-        if(pas.equals(adpas)){
-            
-        PEliminarsala abrir =new PEliminarsala();
-        abrir.setVisible(true);
-        this.dispose();
-        }
-    }//GEN-LAST:event_BEliminarActionPerformed
 
     private void btacceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btacceptarActionPerformed
        String pas = pwd.getText();
@@ -212,7 +190,6 @@ public class PAdministrador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BEliminar;
     private javax.swing.JButton BRegistrar;
     private javax.swing.JButton Baddsala;
     private javax.swing.JTextField accepted;

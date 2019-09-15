@@ -50,6 +50,7 @@ public class LabDatos1 {
 			System.out.println(string);
     }
   
+    
 
     
 }

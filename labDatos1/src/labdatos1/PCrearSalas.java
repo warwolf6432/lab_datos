@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -65,30 +66,29 @@ public class PCrearSalas extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         fotosal = new javax.swing.JLabel();
         cargarfsal = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         disp = new javax.swing.JTextField();
-        jSpinField3 = new com.toedter.components.JSpinField();
-        jSpinField4 = new com.toedter.components.JSpinField();
+        horai = new com.toedter.components.JSpinField();
+        horaf = new com.toedter.components.JSpinField();
         jButton2 = new javax.swing.JButton();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        cali = new com.toedter.calendar.JDateChooser();
         jLabel13 = new javax.swing.JLabel();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
+        calf = new com.toedter.calendar.JDateChooser();
         jLabel14 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
 
         Tabla1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "nombre Sala", "#computadores", "Software", "Disponibilidad", "diainicial", "diafinal", "horainicial", "horafinal"
+                "nombre Sala", "#computadores", "Software", "Disponibilidad", "horainicial", "horafinal", "diainicial", "diafinal", "foto"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Float.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.Float.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -191,7 +191,7 @@ public class PCrearSalas extends javax.swing.JFrame {
 
         jLabel9.setText("PM");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(84, 328, 17, 16);
+        jLabel9.setBounds(130, 330, 17, 16);
 
         jLabel10.setText("Hora de finalizacion");
         getContentPane().add(jLabel10);
@@ -199,20 +199,7 @@ public class PCrearSalas extends javax.swing.JFrame {
 
         jLabel11.setText("PM");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(84, 396, 17, 16);
-
-        jButton5.setText("Set");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(107, 390, 46, 28);
-
-        jButton6.setText("Set");
-        getContentPane().add(jButton6);
-        jButton6.setBounds(107, 322, 46, 28);
+        jLabel11.setBounds(130, 400, 20, 16);
 
         fotosal.setText("FOTO DE SALA");
         getContentPane().add(fotosal);
@@ -234,10 +221,10 @@ public class PCrearSalas extends javax.swing.JFrame {
         disp.setText(" ");
         getContentPane().add(disp);
         disp.setBounds(219, 225, 35, 28);
-        getContentPane().add(jSpinField3);
-        jSpinField3.setBounds(40, 322, 38, 28);
-        getContentPane().add(jSpinField4);
-        jSpinField4.setBounds(40, 390, 38, 28);
+        getContentPane().add(horai);
+        horai.setBounds(40, 322, 80, 28);
+        getContentPane().add(horaf);
+        horaf.setBounds(40, 390, 80, 28);
 
         jButton2.setText("Eliminar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -247,18 +234,27 @@ public class PCrearSalas extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2);
         jButton2.setBounds(219, 615, 74, 28);
-        getContentPane().add(jDateChooser1);
-        jDateChooser1.setBounds(40, 175, 119, 28);
+        getContentPane().add(cali);
+        cali.setBounds(40, 175, 119, 28);
 
         jLabel13.setText("inicio");
         getContentPane().add(jLabel13);
         jLabel13.setBounds(165, 175, 29, 16);
-        getContentPane().add(jDateChooser2);
-        jDateChooser2.setBounds(40, 209, 119, 28);
+        getContentPane().add(calf);
+        calf.setBounds(40, 209, 119, 28);
 
         jLabel14.setText("final");
         getContentPane().add(jLabel14);
         jLabel14.setBounds(165, 209, 23, 16);
+
+        jButton7.setText("Agregar Horario");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton7);
+        jButton7.setBounds(40, 430, 150, 28);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -294,7 +290,8 @@ public class PCrearSalas extends javax.swing.JFrame {
           int numCompu= Integer.parseInt(numS.getText());
           String software=sf.getText(); 
           int disponibilidad = Integer.parseInt(disp.getText());
-        
+          
+          
         model.addRow(new Object[]{NomSala,numCompu,software,disponibilidad});
         
         nomS.setText("");
@@ -306,10 +303,6 @@ public class PCrearSalas extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
 File sal;
     private void cargarfsalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarfsalActionPerformed
          int res;
@@ -358,8 +351,10 @@ File sal;
                     Integer numS = Integer.parseInt(datos[1]);
                     String sf = datos[2];
                     Integer disp = Integer.parseInt(datos[3]);
+                    Integer horai = Integer.parseInt(datos[4]);
+                    Integer horaf = Integer.parseInt(datos[5]);
                     
-                    model.addRow(new Object[]{nomS,numS,sf,disp});
+                    model.addRow(new Object[]{nomS,numS,sf,disp,horai,horaf});
                 }
             } catch (FileNotFoundException ex) {
                 System.out.println("nada");
@@ -410,6 +405,39 @@ File sal;
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        String sDir = "c:\\calendario";
+        File f = new File(sDir);
+        String ruta = "c:\\calendario";
+        String nombr = "cal.txt";
+        File archivo = new File(ruta,nombr);
+        if(!f.exists()){
+            f.mkdir();
+            try {
+                archivo.createNewFile();
+            }catch(IOException ex){
+                JOptionPane.showMessageDialog(rootPane, "Archivo no encontrado");
+            }
+        }
+        try(FileWriter fw = new FileWriter(archivo.getAbsoluteFile(),true)){
+            BufferedWriter bw = new BufferedWriter(fw);
+            
+            String diai = Integer.toString(cali.getCalendar().get(Calendar.DAY_OF_MONTH));
+            String mesi = Integer.toString(cali.getCalendar().get(Calendar.MONTH));
+            String añoi = Integer.toString(cali.getCalendar().get(Calendar.YEAR));       
+            String diaf = Integer.toString(calf.getCalendar().get(Calendar.DAY_OF_MONTH));
+            String mesf = Integer.toString(calf.getCalendar().get(Calendar.MONTH));
+            String añof = Integer.toString(calf.getCalendar().get(Calendar.YEAR));     
+            bw.write(diai+"/"+mesi+"/"+añoi+","+diaf+"/"+mesf+"/"+añof);
+            bw.newLine();
+            bw.flush();
+            bw.close();
+            fw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(PCrearSalas.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton7ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -449,18 +477,19 @@ File sal;
     private javax.swing.JButton Select;
     private javax.swing.JTable Tabla1;
     private javax.swing.JFrame TabladeSalas;
+    private com.toedter.calendar.JDateChooser calf;
+    private com.toedter.calendar.JDateChooser cali;
     private javax.swing.JButton cargarfsal;
     private javax.swing.JTextField disp;
     private javax.swing.JFileChooser fc1;
     private javax.swing.JLabel fotosal;
+    private com.toedter.components.JSpinField horaf;
+    private com.toedter.components.JSpinField horai;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -476,8 +505,6 @@ File sal;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private com.toedter.components.JSpinField jSpinField3;
-    private com.toedter.components.JSpinField jSpinField4;
     private javax.swing.JTextField nomS;
     private javax.swing.JTextField numS;
     private javax.swing.JTextField ruta1;

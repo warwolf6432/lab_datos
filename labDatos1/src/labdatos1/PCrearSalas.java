@@ -108,6 +108,11 @@ public class PCrearSalas extends javax.swing.JFrame {
         jLabel5.setText("horarios de prestamos");
 
         jButton1.setText("Guardar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         numS.setText(" ");
 
@@ -235,15 +240,16 @@ public class PCrearSalas extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nomS, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel5)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel13))
-                                    .addComponent(nomS, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addGap(12, 12, 12)))))
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(12, 12, 12))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel13)
+                                .addGap(27, 27, 27)))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton2)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -290,7 +296,7 @@ public class PCrearSalas extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(sf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel13))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -424,13 +430,14 @@ File sal;
             DefaultTableModel model = (DefaultTableModel) Tabla1.getModel();
             try(Scanner s = new Scanner(archivo)){
                 while(s.hasNextLine()){
+                    
                     String linea = s.nextLine();
                     String datos[] = linea.split(",");
                     
                     String nomS = datos[0];
-                    Integer numS = Integer.parseInt(datos[1]);
+                    int numS = Integer.parseInt(datos[1]);
                     String sf = datos[2];
-                    Integer disp = Integer.parseInt(datos[3]);
+                    int disp = Integer.parseInt(datos[3]);
                     
                     model.addRow(new Object[]{nomS,numS,sf,disp});
                 }
@@ -460,6 +467,28 @@ File sal;
         
         model.removeRow(fila);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+  
+        DefaultTableModel model = (DefaultTableModel) Tabla1.getModel();
+        
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter(archivo))){
+            int fila = model.getRowCount();
+            for (int i = 0; i < fila; i++) {
+                
+                Object nomS = model.getValueAt(i, 0);
+                Object numS = model.getValueAt(i, 1);
+                Object sf = model.getValueAt(i, 2);
+                Object disp = model.getValueAt(i, 3);
+                
+                bw.write(nomS+","+numS+","+sf+","+disp);
+                bw.newLine();
+                
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Clase.class.getName()).log(Level.SEVERE, null, ex);
+        }        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

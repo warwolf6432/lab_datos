@@ -84,11 +84,11 @@ public class PCrearSalas extends javax.swing.JFrame {
 
             },
             new String [] {
-                "nombre Sala", "#computadores", "Software", "Disponibilidad", "horainicial", "horafinal", "diainicial", "diafinal", "foto"
+                "nombreSala", "#computadores", "software", "horai", "horaf", "diainicial", "diafinal", "foto", "disponibilidad"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Float.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -351,8 +351,7 @@ File sal;
                     Integer numS = Integer.parseInt(datos[1]);
                     String sf = datos[2];
                     Integer disp = Integer.parseInt(datos[3]);
-                    Integer horai = Integer.parseInt(datos[4]);
-                    Integer horaf = Integer.parseInt(datos[5]);
+                    
                     
                     model.addRow(new Object[]{nomS,numS,sf,disp,horai,horaf});
                 }

@@ -71,12 +71,15 @@ public class PCrearSalas extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         disp = new javax.swing.JTextField();
 <<<<<<< HEAD
+<<<<<<< HEAD
         jSpinField3 = new com.toedter.components.JSpinField();
         jSpinField4 = new com.toedter.components.JSpinField();
         jButton2 = new javax.swing.JButton();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel13 = new javax.swing.JLabel();
 =======
+=======
+>>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
         horai = new com.toedter.components.JSpinField();
         horaf = new com.toedter.components.JSpinField();
         jButton2 = new javax.swing.JButton();
@@ -85,6 +88,9 @@ public class PCrearSalas extends javax.swing.JFrame {
         calf = new com.toedter.calendar.JDateChooser();
         jLabel14 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
+<<<<<<< HEAD
+>>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
+=======
 >>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
 
         Tabla1.setModel(new javax.swing.table.DefaultTableModel(
@@ -94,11 +100,19 @@ public class PCrearSalas extends javax.swing.JFrame {
             new String [] {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "nombre Sala", "#computadores", "Software", "Disponibilidad"
             }
         ) {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.Float.class, java.lang.String.class, java.lang.String.class
+=======
+                "nombreSala", "#computadores", "software", "horai", "horaf", "diainicial", "diafinal", "foto", "disponibilidad"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Integer.class
+>>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
 =======
                 "nombreSala", "#computadores", "software", "horai", "horaf", "diainicial", "diafinal", "foto", "disponibilidad"
             }
@@ -154,6 +168,9 @@ public class PCrearSalas extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(49, 581, 73, 28);
+<<<<<<< HEAD
+>>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
+=======
 >>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
 
         numS.setText(" ");
@@ -166,6 +183,11 @@ public class PCrearSalas extends javax.swing.JFrame {
 
         sf.setText(" ");
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        getContentPane().add(sf);
+        sf.setBounds(219, 169, 215, 28);
+>>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
 =======
         getContentPane().add(sf);
         sf.setBounds(219, 169, 215, 28);
@@ -250,13 +272,19 @@ public class PCrearSalas extends javax.swing.JFrame {
 
         disp.setText(" ");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
         getContentPane().add(disp);
         disp.setBounds(219, 225, 35, 28);
         getContentPane().add(horai);
         horai.setBounds(40, 322, 80, 28);
         getContentPane().add(horaf);
         horaf.setBounds(40, 390, 80, 28);
+<<<<<<< HEAD
+>>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
+=======
 >>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
 
         jButton2.setText("Eliminar");
@@ -265,6 +293,7 @@ public class PCrearSalas extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         jLabel13.setText("dia");
@@ -416,6 +445,8 @@ public class PCrearSalas extends javax.swing.JFrame {
                 .addGap(9, 9, 9))
         );
 =======
+=======
+>>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
         getContentPane().add(jButton2);
         jButton2.setBounds(219, 615, 74, 28);
         getContentPane().add(cali);
@@ -439,6 +470,9 @@ public class PCrearSalas extends javax.swing.JFrame {
         });
         getContentPane().add(jButton7);
         jButton7.setBounds(40, 430, 150, 28);
+<<<<<<< HEAD
+>>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
+=======
 >>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
 
         pack();
@@ -566,12 +600,15 @@ File sal;
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         DefaultTableModel model = (DefaultTableModel) Tabla1.getModel();
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         int fila = Tabla1.getSelectedRow();
         
         model.removeRow(fila);
     }//GEN-LAST:event_jButton2ActionPerformed
 =======
+=======
+>>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
         
         int fila = Tabla1.getSelectedRow();
         
@@ -632,6 +669,9 @@ File sal;
             Logger.getLogger(PCrearSalas.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton7ActionPerformed
+<<<<<<< HEAD
+>>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
+=======
 >>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
 
     /**
@@ -686,9 +726,13 @@ File sal;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private com.toedter.calendar.JDateChooser jDateChooser1;
+=======
+    private javax.swing.JButton jButton7;
+>>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
 =======
     private javax.swing.JButton jButton7;
 >>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
@@ -698,6 +742,10 @@ File sal;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    private javax.swing.JLabel jLabel14;
+>>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
 =======
     private javax.swing.JLabel jLabel14;
 >>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
@@ -711,8 +759,11 @@ File sal;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private com.toedter.components.JSpinField jSpinField3;
     private com.toedter.components.JSpinField jSpinField4;
+=======
+>>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
 =======
 >>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
     private javax.swing.JTextField nomS;

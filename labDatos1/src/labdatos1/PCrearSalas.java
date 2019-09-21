@@ -70,16 +70,6 @@ public class PCrearSalas extends javax.swing.JFrame {
         cargarfsal = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         disp = new javax.swing.JTextField();
-<<<<<<< HEAD
-<<<<<<< HEAD
-        jSpinField3 = new com.toedter.components.JSpinField();
-        jSpinField4 = new com.toedter.components.JSpinField();
-        jButton2 = new javax.swing.JButton();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jLabel13 = new javax.swing.JLabel();
-=======
-=======
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
         horai = new com.toedter.components.JSpinField();
         horaf = new com.toedter.components.JSpinField();
         jButton2 = new javax.swing.JButton();
@@ -88,45 +78,17 @@ public class PCrearSalas extends javax.swing.JFrame {
         calf = new com.toedter.calendar.JDateChooser();
         jLabel14 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
-<<<<<<< HEAD
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
-=======
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
 
         Tabla1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                "nombre Sala", "#computadores", "Software", "Disponibilidad"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Float.class, java.lang.String.class, java.lang.String.class
-=======
                 "nombreSala", "#computadores", "software", "horai", "horaf", "diainicial", "diafinal", "foto", "disponibilidad"
             }
         ) {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Integer.class
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
-=======
-                "nombreSala", "#computadores", "software", "horai", "horaf", "diainicial", "diafinal", "foto", "disponibilidad"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Integer.class
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
-=======
-                "nombreSala", "#computadores", "software", "horai", "horaf", "diainicial", "diafinal", "foto", "disponibilidad"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Integer.class
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -159,8 +121,6 @@ public class PCrearSalas extends javax.swing.JFrame {
         jLabel5.setBounds(40, 147, 126, 16);
 
         jButton1.setText("Guardar");
-<<<<<<< HEAD
-=======
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -168,10 +128,6 @@ public class PCrearSalas extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(49, 581, 73, 28);
-<<<<<<< HEAD
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
-=======
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
 
         numS.setText(" ");
         getContentPane().add(numS);
@@ -182,16 +138,8 @@ public class PCrearSalas extends javax.swing.JFrame {
         nomS.setBounds(40, 113, 167, 28);
 
         sf.setText(" ");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         getContentPane().add(sf);
         sf.setBounds(219, 169, 215, 28);
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
-=======
-        getContentPane().add(sf);
-        sf.setBounds(219, 169, 215, 28);
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
 
         jLabel7.setText("archivo de salas");
         getContentPane().add(jLabel7);
@@ -271,21 +219,12 @@ public class PCrearSalas extends javax.swing.JFrame {
         jLabel12.setBounds(219, 203, 215, 16);
 
         disp.setText(" ");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
         getContentPane().add(disp);
         disp.setBounds(219, 225, 35, 28);
         getContentPane().add(horai);
         horai.setBounds(40, 322, 80, 28);
         getContentPane().add(horaf);
         horaf.setBounds(40, 390, 80, 28);
-<<<<<<< HEAD
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
-=======
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
 
         jButton2.setText("Eliminar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -293,160 +232,6 @@ public class PCrearSalas extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        jLabel13.setText("dia");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(ruta1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Select)))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(40, 40, 40)
-                                .addComponent(jLabel4))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(49, 49, 49)
-                                .addComponent(jButton1)))
-                        .addGap(66, 66, 66))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jSpinField3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jSpinField4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel9)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jButton6))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel11)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jButton5))))
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jLabel10))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel5)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel13))
-                                    .addComponent(nomS, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addGap(12, 12, 12)))))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(cargarfsal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addComponent(jLabel1)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel3))
-                        .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(numS, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(disp, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(fotosal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(sf, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(43, 43, 43))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ruta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Select))
-                .addGap(13, 13, 13)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel4)
-                        .addComponent(jLabel1))
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(numS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nomS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(sf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel12)))
-                .addGap(9, 9, 9)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(disp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(9, 9, 9)
-                        .addComponent(fotosal, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jLabel6)
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel8)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel9)
-                                .addComponent(jButton6))
-                            .addComponent(jSpinField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel11)
-                                .addComponent(jButton5))
-                            .addComponent(jSpinField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(6, 6, 6)
-                .addComponent(cargarfsal)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                .addComponent(jButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
-                .addGap(9, 9, 9))
-        );
-=======
-=======
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
         getContentPane().add(jButton2);
         jButton2.setBounds(219, 615, 74, 28);
         getContentPane().add(cali);
@@ -470,10 +255,6 @@ public class PCrearSalas extends javax.swing.JFrame {
         });
         getContentPane().add(jButton7);
         jButton7.setBounds(40, 430, 150, 28);
-<<<<<<< HEAD
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
-=======
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -570,10 +351,6 @@ File sal;
                     Integer numS = Integer.parseInt(datos[1]);
                     String sf = datos[2];
                     Integer disp = Integer.parseInt(datos[3]);
-<<<<<<< HEAD
-=======
-                    
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
                     
                     
                     model.addRow(new Object[]{nomS,numS,sf,disp,horai,horaf});
@@ -599,16 +376,6 @@ File sal;
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         DefaultTableModel model = (DefaultTableModel) Tabla1.getModel();
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-        int fila = Tabla1.getSelectedRow();
-        
-        model.removeRow(fila);
-    }//GEN-LAST:event_jButton2ActionPerformed
-=======
-=======
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
         
         int fila = Tabla1.getSelectedRow();
         
@@ -669,10 +436,6 @@ File sal;
             Logger.getLogger(PCrearSalas.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton7ActionPerformed
-<<<<<<< HEAD
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
-=======
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
 
     /**
      * @param args the command line arguments
@@ -725,30 +488,13 @@ File sal;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-=======
     private javax.swing.JButton jButton7;
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
-=======
-    private javax.swing.JButton jButton7;
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     private javax.swing.JLabel jLabel14;
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
-=======
-    private javax.swing.JLabel jLabel14;
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -758,14 +504,6 @@ File sal;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    private com.toedter.components.JSpinField jSpinField3;
-    private com.toedter.components.JSpinField jSpinField4;
-=======
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
-=======
->>>>>>> 4a9cb1f2f12234839f82047f010aa4c9781cf749
     private javax.swing.JTextField nomS;
     private javax.swing.JTextField numS;
     private javax.swing.JTextField ruta1;

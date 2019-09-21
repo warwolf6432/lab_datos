@@ -6,19 +6,27 @@
 package labdatos1;
 
 import java.awt.Image;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Jack Howard Ortega
  */
 public class PRegistrarse extends javax.swing.JFrame {
-
+ File archivo;
     /**
      * Creates new form PRegistrarse
      */
@@ -35,34 +43,62 @@ public class PRegistrarse extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        TabladeUsuarios = new javax.swing.JFrame();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Tabla2 = new javax.swing.JTable();
+        fc2 = new javax.swing.JFileChooser();
         jLabel1 = new javax.swing.JLabel();
-        RUsuario = new javax.swing.JTextField();
+        nomU = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        RCedula = new javax.swing.JTextField();
+        CedU = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        RCorreo = new javax.swing.JTextField();
+        CorreoU = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         lblfoto = new javax.swing.JLabel();
         cargarfoto = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        ruta2 = new javax.swing.JTextField();
+        Select2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+
+        Tabla2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "nomU", "cedU", "correo", "foto"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Long.class, java.lang.String.class, java.lang.Object.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(Tabla2);
+
+        TabladeUsuarios.getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Registrar");
 
-        RUsuario.setText(" ");
+        nomU.setText(" ");
 
         jLabel2.setText("Nombre de Usuario");
 
         jLabel3.setText("Cedula");
 
-        RCedula.setText(" ");
+        CedU.setText(" ");
 
         jLabel4.setText("Correo");
 
-        RCorreo.setText(" ");
+        CorreoU.setText(" ");
 
         jButton1.setText("Registrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -86,6 +122,27 @@ public class PRegistrarse extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setText("Agregar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        Select2.setText("Archivo");
+        Select2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Select2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Mostrar Usuarios");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -93,57 +150,69 @@ public class PRegistrarse extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(137, 137, 137)
+                        .addGap(93, 93, 93)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButton1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(79, 79, 79)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cargarfoto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, 0, 195, Short.MAX_VALUE)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel2)
-                                    .addComponent(RUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
-                                    .addComponent(jLabel3)
-                                    .addComponent(RCedula)
-                                    .addComponent(RCorreo)
-                                    .addComponent(lblfoto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGap(57, 57, 57)))
-                .addGap(717, 717, 717))
+                        .addGap(43, 43, 43)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton3)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jButton2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton1))
+                                .addComponent(cargarfoto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel5)
+                                .addComponent(jLabel4)
+                                .addComponent(nomU)
+                                .addComponent(jLabel3)
+                                .addComponent(CedU)
+                                .addComponent(CorreoU)
+                                .addComponent(lblfoto, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addComponent(ruta2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(Select2)
+                                    .addGap(9, 9, 9))))))
+                .addContainerGap(810, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(17, 17, 17)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ruta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Select2))
+                .addGap(14, 14, 14)
                 .addComponent(jLabel2)
                 .addGap(3, 3, 3)
-                .addComponent(RUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nomU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(RCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CedU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(RCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CorreoU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblfoto, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addComponent(lblfoto, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cargarfoto)
                 .addGap(6, 6, 6)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addGap(23, 23, 23))
+                .addGap(1, 1, 1)
+                .addComponent(jButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2)))
         );
 
         pack();
@@ -179,6 +248,88 @@ File fichero;
         
         
     }//GEN-LAST:event_cargarfotoActionPerformed
+
+    private void Select2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Select2ActionPerformed
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Archivos .txt", "txt");
+        
+        fc2.setFileFilter(filter);
+        
+        int op = fc2.showOpenDialog(this);
+        
+        if (op == JFileChooser.APPROVE_OPTION) {
+            
+            archivo = fc2.getSelectedFile();
+            
+            ruta2.setText(archivo.getAbsolutePath());
+            
+            DefaultTableModel model = (DefaultTableModel) Tabla2.getModel();
+            try(Scanner s = new Scanner(archivo)){
+                while(s.hasNextLine()){
+                    String linea = s.nextLine();
+                    String datos[] = linea.split(",");
+                    
+                    String nomS = datos[0];
+                    Integer numS = Integer.parseInt(datos[1]);
+                    String sf = datos[2];
+                    Integer disp = Integer.parseInt(datos[3]);
+                    
+                    
+                    model.addRow(new Object[]{nomS,numS,sf,disp});
+                }
+            } catch (FileNotFoundException ex) {
+                System.out.println("nada");
+                JOptionPane.showMessageDialog(null, "No se encontro el archivo");
+            }
+            
+            
+        } 
+    }//GEN-LAST:event_Select2ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+         String SltDir = "c:\\user";
+        File f = new File(SltDir);
+        String ruta = "c:\\user";
+        String arch = "User.txt";
+        File archivo = new File(ruta,arch);
+        if(!f.exists()){
+            f.mkdir();
+            try {
+                archivo.createNewFile();
+            }catch(IOException ex){
+                JOptionPane.showMessageDialog(rootPane, "Archivo no encontrado");
+            }
+        }
+        try(FileWriter fw = new FileWriter(archivo.getAbsoluteFile(),true)){
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(nomU.getText()+","+CedU.getText()+","+CorreoU.getText());
+            bw.newLine();
+            bw.flush();
+            bw.close();
+            fw.close();
+        }catch (IOException ex) {
+            Logger.getLogger(PCrearSalas.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        DefaultTableModel model = (DefaultTableModel) Tabla2.getModel();
+        
+          String nomUs = nomU.getText();
+          Long CedUs = Long.parseLong(CedU.getText());
+          String correoUs = CorreoU.getText(); 
+          
+          
+          
+        model.addRow(new Object[]{nomUs,CedUs,correoUs});
+        
+        nomU.setText("");
+        CedU.setText("");
+        CorreoU.setText("");
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        TabladeUsuarios.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -216,17 +367,25 @@ File fichero;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField RCedula;
-    private javax.swing.JTextField RCorreo;
-    private javax.swing.JTextField RUsuario;
+    private javax.swing.JTextField CedU;
+    private javax.swing.JTextField CorreoU;
+    private javax.swing.JButton Select2;
+    private javax.swing.JTable Tabla2;
+    private javax.swing.JFrame TabladeUsuarios;
     private javax.swing.JButton cargarfoto;
+    private javax.swing.JFileChooser fc2;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblfoto;
+    private javax.swing.JTextField nomU;
+    private javax.swing.JTextField ruta2;
     // End of variables declaration//GEN-END:variables
 }

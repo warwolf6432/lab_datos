@@ -21,6 +21,8 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
+import java.io.*;
+
 
 /**
  *
@@ -394,10 +396,16 @@ File sal;
                 Object sf = model.getValueAt(i, 2);
                 Object disp = model.getValueAt(i, 3);
                 
+               
+               
+                
                 bw.write(nomS+","+numS+","+sf+","+disp);
                 bw.newLine();
+                 bw.close();
+                
                 
             }
+            
         } catch (IOException ex) {
             Logger.getLogger(PCrearSalas.class.getName()).log(Level.SEVERE, null, ex);
         }

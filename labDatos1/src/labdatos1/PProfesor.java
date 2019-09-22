@@ -5,6 +5,8 @@
  */
 package labdatos1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Jack Howard Ortega
@@ -115,7 +117,7 @@ public class PProfesor extends javax.swing.JFrame {
             }
         });
 
-        jButton7.setText("reservar sala");
+        jButton7.setText("cancelar sala");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -219,7 +221,17 @@ public class PProfesor extends javax.swing.JFrame {
     }//GEN-LAST:event_rcompActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+         int tcomp=(int) (Math.random() * 99) + 1;
+        int comp[]=new int[tcomp];
+        for (int i = 0; i < tcomp; i++) {
+            comp[i]=1;
+        }
+         int rcomps=Integer.parseInt(rcomp.getText());
+        if(comp[rcomps]== 1){
+            JOptionPane.showMessageDialog(this," ocupo esta computadora con exito");
+        }else{
+            JOptionPane.showMessageDialog(this,"este computador esta ocupada");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed

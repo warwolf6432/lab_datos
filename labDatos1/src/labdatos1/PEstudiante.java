@@ -165,7 +165,7 @@ public class PEstudiante extends javax.swing.JFrame {
     private void BreservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BreservaActionPerformed
         
         int tcomp=(int) (Math.random() * 99) + 1;
-        int comp[]=new comp[tcomp];
+        int comp[]=new int[tcomp];
         for (int i = 0; i < tcomp; i++) {
             comp[i]=1;
         }

@@ -227,7 +227,7 @@ public class PProfesor extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField5ActionPerformed
 
     private void rsalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rsalaActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_rsalaActionPerformed
 
     /**

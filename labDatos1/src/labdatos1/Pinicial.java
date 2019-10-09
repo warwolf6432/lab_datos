@@ -148,7 +148,7 @@ public class Pinicial extends javax.swing.JFrame {
         abrir.setVisible(true);
         this.dispose();
         }else{
-            JOptionPane.showMessageDialog(null, "No ingreso tipo de usuario usuario");
+            JOptionPane.showMessageDialog(null, "No ingreso tipo de usuario");
         
               }
            }

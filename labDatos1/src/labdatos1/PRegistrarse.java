@@ -66,6 +66,8 @@ public class PRegistrarse extends javax.swing.JFrame {
         Select2 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         Tabla2 = new javax.swing.JTable();
+        modificar = new javax.swing.JButton();
+        eliminar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -139,6 +141,20 @@ public class PRegistrarse extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(Tabla2);
 
+        modificar.setText("actualizar");
+        modificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificarActionPerformed(evt);
+            }
+        });
+
+        eliminar.setText("eliminar");
+        eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -151,12 +167,10 @@ public class PRegistrarse extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(43, 43, 43)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton1))
                             .addComponent(cargarfoto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(79, 79, 79))
                             .addComponent(jLabel5)
                             .addComponent(jLabel4)
                             .addComponent(nomU)
@@ -169,7 +183,15 @@ public class PRegistrarse extends javax.swing.JFrame {
                                 .addComponent(ruta2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Select2)
-                                .addGap(9, 9, 9)))))
+                                .addGap(9, 9, 9))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButton2)
+                                    .addComponent(modificar))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(eliminar)
+                                    .addComponent(jButton1))))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(72, Short.MAX_VALUE))
@@ -206,7 +228,11 @@ public class PRegistrarse extends javax.swing.JFrame {
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(modificar)
+                    .addComponent(eliminar))
+                .addGap(1, 1, 1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton2)))
@@ -222,12 +248,12 @@ public class PRegistrarse extends javax.swing.JFrame {
             int fila = model.getRowCount();
             for (int i = 0; i < fila; i++) {
                 
-                Object cod = model.getValueAt(i, 0);
-                Object nom = model.getValueAt(i, 1);
-                Object prom = model.getValueAt(i, 2);
-                Object cel = model.getValueAt(i, 3);
+                Object nom = model.getValueAt(i, 0);
+                Object ced = model.getValueAt(i, 1);
+                Object correo = model.getValueAt(i, 2);
+               
                 
-                bw.write(cod+","+nom+","+prom+","+cel);
+                bw.write(nom+","+ced+","+correo);
                 bw.newLine();
                 
             }
@@ -321,6 +347,11 @@ File fichero;
         dato[2]=CorreoU.getText();
         modelo.addRow(dato);
         
+        nomU.setText("");
+        CedU.setText("");
+        CorreoU.setText("");
+        nomU.requestFocus();
+       
     }//GEN-LAST:event_jButton2ActionPerformed
 
     
@@ -332,6 +363,27 @@ File fichero;
     private void nomUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomUActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nomUActionPerformed
+
+    private void modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarActionPerformed
+        int FilaSelec = Tabla2.getSelectedRow();
+        if(FilaSelec>= 0){
+            nomU.setText(Tabla2.getValueAt(FilaSelec,0).toString());
+            CedU.setText(Tabla2.getValueAt(FilaSelec,1).toString());
+            CorreoU.setText(Tabla2.getValueAt(FilaSelec,2).toString());
+            modelo.removeRow(FilaSelec);
+        }else{
+            JOptionPane.showMessageDialog(this,"no ha seleccionado");
+        }
+    }//GEN-LAST:event_modificarActionPerformed
+
+    private void eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarActionPerformed
+         int FilaSelec = Tabla2.getSelectedRow();
+        if(FilaSelec>= 0){
+            modelo.removeRow(FilaSelec);
+        }else{
+            JOptionPane.showMessageDialog(this,"no ha seleccionado");
+        }
+    }//GEN-LAST:event_eliminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -374,6 +426,7 @@ File fichero;
     private javax.swing.JButton Select2;
     private javax.swing.JTable Tabla2;
     private javax.swing.JButton cargarfoto;
+    private javax.swing.JButton eliminar;
     private javax.swing.JFileChooser fc2;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -385,6 +438,7 @@ File fichero;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblfoto;
+    private javax.swing.JButton modificar;
     private javax.swing.JTextField nomU;
     private javax.swing.JTextField ruta2;
     // End of variables declaration//GEN-END:variables

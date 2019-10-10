@@ -72,8 +72,15 @@ public class PRegistrarse extends javax.swing.JFrame {
         eliminar = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
 
         jLabel6.setText("jLabel6");
 
@@ -130,7 +137,7 @@ public class PRegistrarse extends javax.swing.JFrame {
         lblfoto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblfoto.setText("foto ");
         lblfoto.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        getContentPane().add(lblfoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 261, 195, 115));
+        getContentPane().add(lblfoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 195, 115));
 
         cargarfoto.setText("Cargar foto");
         cargarfoto.addActionListener(new java.awt.event.ActionListener() {
@@ -138,7 +145,7 @@ public class PRegistrarse extends javax.swing.JFrame {
                 cargarfotoActionPerformed(evt);
             }
         });
-        getContentPane().add(cargarfoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 409, 195, -1));
+        getContentPane().add(cargarfoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 195, -1));
 
         jButton2.setText("Agregar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -186,10 +193,31 @@ public class PRegistrarse extends javax.swing.JFrame {
         getContentPane().add(eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 473, -1, -1));
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 7, -1, -1));
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 7, -1, -1));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labdatos1/1536318074_444085_1536318195_noticia_normal.jpg"))); // NOI18N
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 540));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 7, -1, -1));
+
+        jLabel12.setText("jLabel12");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 190, -1));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 496, -1, 40));
+
+        jTextField1.setText("jTextField1");
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 200, -1));
+
+        jTextField2.setText("jTextField2");
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 190, -1));
+
+        jLabel13.setText("jLabel13");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, -1, -1));
+
+        jTextField3.setText("jTextField3");
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -387,6 +415,8 @@ File fichero;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -395,7 +425,12 @@ File fichero;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     private javax.swing.JLabel lblfoto;
     private javax.swing.JButton modificar;
     private javax.swing.JTextField nomU;

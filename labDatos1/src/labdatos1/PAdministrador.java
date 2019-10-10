@@ -36,11 +36,14 @@ public class PAdministrador extends javax.swing.JFrame {
         btacceptar = new javax.swing.JButton();
         accepted = new javax.swing.JTextField();
         pwd = new javax.swing.JPasswordField();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("admin");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setText("Administrador");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 9, -1, -1));
 
         BRegistrar.setText("Registrar Usuarios");
         BRegistrar.addActionListener(new java.awt.event.ActionListener() {
@@ -48,6 +51,7 @@ public class PAdministrador extends javax.swing.JFrame {
                 BRegistrarActionPerformed(evt);
             }
         });
+        getContentPane().add(BRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 32, -1, -1));
 
         Baddsala.setText("Modificar Salas");
         Baddsala.addActionListener(new java.awt.event.ActionListener() {
@@ -55,8 +59,10 @@ public class PAdministrador extends javax.swing.JFrame {
                 BaddsalaActionPerformed(evt);
             }
         });
+        getContentPane().add(Baddsala, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 75, 137, -1));
 
         jLabel1.setText("ingrese contraseña");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(301, 9, -1, -1));
 
         btacceptar.setText("Ingresar");
         btacceptar.addActionListener(new java.awt.event.ActionListener() {
@@ -64,54 +70,14 @@ public class PAdministrador extends javax.swing.JFrame {
                 btacceptarActionPerformed(evt);
             }
         });
+        getContentPane().add(btacceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(301, 75, 109, -1));
 
         accepted.setEditable(false);
+        getContentPane().add(accepted, new org.netbeans.lib.awtextra.AbsoluteConstraints(301, 111, 109, -1));
+        getContentPane().add(pwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(301, 32, 109, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(126, 126, 126)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(BRegistrar)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(Baddsala, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(38, 38, 38))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel5)
-                        .addGap(70, 70, 70)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btacceptar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(accepted)
-                    .addComponent(pwd))
-                .addContainerGap(29, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(9, 9, 9)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BRegistrar)
-                    .addComponent(pwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btacceptar)
-                        .addGap(11, 11, 11)
-                        .addComponent(accepted, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(Baddsala))
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labdatos1/1536318074_444085_1536318195_noticia_normal.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 150));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -195,6 +161,7 @@ public class PAdministrador extends javax.swing.JFrame {
     private javax.swing.JTextField accepted;
     private javax.swing.JButton btacceptar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPasswordField pwd;
     // End of variables declaration//GEN-END:variables

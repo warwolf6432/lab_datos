@@ -49,6 +49,8 @@ public class PRegistrarse extends javax.swing.JFrame {
     private void initComponents() {
 
         fc2 = new javax.swing.JFileChooser();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         nomU = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -68,10 +70,20 @@ public class PRegistrarse extends javax.swing.JFrame {
         Tabla2 = new javax.swing.JTable();
         modificar = new javax.swing.JButton();
         eliminar = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+
+        jLabel6.setText("jLabel6");
+
+        jLabel10.setText("jLabel10");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Registrar");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(62, 7, -1, -1));
 
         nomU.setText(" ");
         nomU.addActionListener(new java.awt.event.ActionListener() {
@@ -79,16 +91,22 @@ public class PRegistrarse extends javax.swing.JFrame {
                 nomUActionPerformed(evt);
             }
         });
+        getContentPane().add(nomU, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 94, 195, -1));
 
         jLabel2.setText("Nombre de Usuario");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 75, 195, -1));
 
         jLabel3.setText("Cedula");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 123, -1, -1));
 
         CedU.setText(" ");
+        getContentPane().add(CedU, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 146, 195, -1));
 
         jLabel4.setText("Correo");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 175, -1, -1));
 
         CorreoU.setText(" ");
+        getContentPane().add(CorreoU, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 198, 195, -1));
 
         jButton1.setText("Registrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -96,6 +114,7 @@ public class PRegistrarse extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 499, -1, -1));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "tipo de usuario", "Estudiante", "Profesor" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -103,12 +122,15 @@ public class PRegistrarse extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 444, 116, -1));
 
         jLabel5.setText("Foto");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 227, -1, -1));
 
         lblfoto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblfoto.setText("foto ");
         lblfoto.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(lblfoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 261, 195, 115));
 
         cargarfoto.setText("Cargar foto");
         cargarfoto.addActionListener(new java.awt.event.ActionListener() {
@@ -116,6 +138,7 @@ public class PRegistrarse extends javax.swing.JFrame {
                 cargarfotoActionPerformed(evt);
             }
         });
+        getContentPane().add(cargarfoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 409, 195, -1));
 
         jButton2.setText("Agregar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -123,6 +146,8 @@ public class PRegistrarse extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 499, -1, -1));
+        getContentPane().add(ruta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 37, 104, -1));
 
         Select2.setText("Archivo");
         Select2.addActionListener(new java.awt.event.ActionListener() {
@@ -130,6 +155,7 @@ public class PRegistrarse extends javax.swing.JFrame {
                 Select2ActionPerformed(evt);
             }
         });
+        getContentPane().add(Select2, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 36, -1, -1));
 
         Tabla2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -141,12 +167,15 @@ public class PRegistrarse extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(Tabla2);
 
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 44, -1, -1));
+
         modificar.setText("actualizar");
         modificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 modificarActionPerformed(evt);
             }
         });
+        getContentPane().add(modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 473, -1, -1));
 
         eliminar.setText("eliminar");
         eliminar.addActionListener(new java.awt.event.ActionListener() {
@@ -154,89 +183,13 @@ public class PRegistrarse extends javax.swing.JFrame {
                 eliminarActionPerformed(evt);
             }
         });
+        getContentPane().add(eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 473, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 7, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 7, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(93, 93, 93)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cargarfoto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(79, 79, 79))
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel4)
-                            .addComponent(nomU)
-                            .addComponent(jLabel3)
-                            .addComponent(CedU)
-                            .addComponent(CorreoU)
-                            .addComponent(lblfoto, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(ruta2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Select2)
-                                .addGap(9, 9, 9))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton2)
-                                    .addComponent(modificar))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(eliminar)
-                                    .addComponent(jButton1))))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(72, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ruta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Select2))
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel2)
-                        .addGap(3, 3, 3)
-                        .addComponent(nomU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CedU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CorreoU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblfoto, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33)
-                        .addComponent(cargarfoto))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(modificar)
-                    .addComponent(eliminar))
-                .addGap(1, 1, 1)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2)))
-        );
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labdatos1/1536318074_444085_1536318195_noticia_normal.jpg"))); // NOI18N
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -265,7 +218,7 @@ public class PRegistrarse extends javax.swing.JFrame {
 File fichero;
 
     private void cargarfotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarfotoActionPerformed
-        int resultado;
+            int resultado;
         cargarfoto ventana = new cargarfoto();
         ventana.setVisible(true);
         
@@ -432,10 +385,16 @@ File fichero;
     private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblfoto;
     private javax.swing.JButton modificar;

@@ -83,27 +83,28 @@ public class PCrearSalas extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         Tabla1 = new javax.swing.JTable();
         jButton5 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
         jLabel1.setText("numeros de computadores");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(219, 91, 150, 16);
+        jLabel1.setBounds(219, 91, 153, 16);
 
         jLabel2.setText(" agregar software");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(219, 147, 96, 16);
+        jLabel2.setBounds(219, 147, 103, 16);
         getContentPane().add(jLabel3);
         jLabel3.setBounds(375, 91, 0, 0);
 
         jLabel4.setText("nombre de la  sala");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(40, 91, 103, 16);
+        jLabel4.setBounds(40, 91, 107, 16);
 
         jLabel5.setText("horarios de prestamos");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(40, 147, 126, 16);
+        jLabel5.setBounds(40, 150, 129, 16);
 
         jButton1.setText("Guardar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -112,23 +113,23 @@ public class PCrearSalas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(49, 581, 73, 28);
+        jButton1.setBounds(49, 581, 79, 25);
 
         numS.setText(" ");
         getContentPane().add(numS);
-        numS.setBounds(219, 113, 137, 28);
+        numS.setBounds(219, 113, 137, 22);
 
         nomS.setText(" ");
         getContentPane().add(nomS);
-        nomS.setBounds(40, 113, 167, 28);
+        nomS.setBounds(40, 113, 167, 22);
 
         sf.setText(" ");
         getContentPane().add(sf);
-        sf.setBounds(219, 169, 215, 28);
+        sf.setBounds(219, 169, 215, 22);
 
         jLabel7.setText("archivo de salas");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(40, 28, 90, 16);
+        jLabel7.setBounds(40, 28, 92, 16);
 
         ruta1.setText("  ");
         ruta1.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +138,7 @@ public class PCrearSalas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(ruta1);
-        ruta1.setBounds(40, 50, 174, 28);
+        ruta1.setBounds(40, 70, 174, 22);
 
         Select.setText("Seleccionar");
         Select.addActionListener(new java.awt.event.ActionListener() {
@@ -146,7 +147,7 @@ public class PCrearSalas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Select);
-        Select.setBounds(226, 50, 93, 28);
+        Select.setBounds(230, 70, 99, 25);
 
         jButton3.setText("Mostrar Registro");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -155,7 +156,7 @@ public class PCrearSalas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(219, 581, 119, 28);
+        jButton3.setBounds(219, 581, 127, 25);
 
         jButton4.setText("Agregar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -164,11 +165,11 @@ public class PCrearSalas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(50, 550, 71, 28);
+        jButton4.setBounds(50, 550, 79, 25);
 
         jLabel8.setText("horas disponibles");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(40, 288, 100, 16);
+        jLabel8.setBounds(40, 270, 99, 16);
 
         fotosal.setText("FOTO DE SALA");
         getContentPane().add(fotosal);
@@ -181,15 +182,15 @@ public class PCrearSalas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cargarfsal);
-        cargarfsal.setBounds(160, 490, 250, 28);
+        cargarfsal.setBounds(170, 490, 250, 25);
 
         jLabel12.setText("disponibilidad(1.disponible,2.ocupado)");
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(219, 203, 215, 16);
+        jLabel12.setBounds(219, 203, 218, 16);
 
         disp.setText(" ");
         getContentPane().add(disp);
-        disp.setBounds(219, 225, 35, 28);
+        disp.setBounds(219, 225, 35, 22);
 
         jButton2.setText("Eliminar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -198,23 +199,23 @@ public class PCrearSalas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(219, 615, 74, 28);
+        jButton2.setBounds(219, 615, 79, 25);
         getContentPane().add(cali);
-        cali.setBounds(40, 175, 119, 28);
+        cali.setBounds(40, 190, 88, 22);
 
         jLabel13.setText("inicio");
         getContentPane().add(jLabel13);
         jLabel13.setBounds(165, 175, 29, 16);
         getContentPane().add(calf);
-        calf.setBounds(40, 209, 119, 28);
+        calf.setBounds(40, 230, 88, 22);
 
         jLabel14.setText("final");
         getContentPane().add(jLabel14);
-        jLabel14.setBounds(165, 209, 23, 16);
+        jLabel14.setBounds(165, 209, 24, 16);
 
         hora.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "seleccione", "8am-9am", "10am-11am", "11am-12pm", "2pm-3pm", "3pm-4pm", "4pm-5pm", "5pm-6pm" }));
         getContentPane().add(hora);
-        hora.setBounds(40, 310, 110, 26);
+        hora.setBounds(40, 300, 110, 22);
 
         Tabla1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -230,7 +231,7 @@ public class PCrearSalas extends javax.swing.JFrame {
         jScrollPane2.setViewportView(Tabla1);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(510, 50, 400, 370);
+        jScrollPane2.setBounds(510, 70, 400, 370);
 
         jButton5.setText("actualizar");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -239,7 +240,11 @@ public class PCrearSalas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(50, 610, 90, 28);
+        jButton5.setBounds(50, 610, 90, 25);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labdatos1/1536318074_444085_1536318195_noticia_normal.jpg"))); // NOI18N
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(0, 0, 950, 650);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -468,6 +473,7 @@ File sal;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane2;

@@ -140,6 +140,11 @@ public class PProfesor extends javax.swing.JFrame {
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 112, 61, -1));
 
         jButton7.setText("cancelar sala");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 111, 130, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labdatos1/1536318074_444085_1536318195_noticia_normal.jpg"))); // NOI18N
@@ -177,6 +182,10 @@ public class PProfesor extends javax.swing.JFrame {
     private void rsalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rsalaActionPerformed
         
     }//GEN-LAST:event_rsalaActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+         
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments

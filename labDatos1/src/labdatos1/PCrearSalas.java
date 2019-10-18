@@ -83,6 +83,7 @@ public class PCrearSalas extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         Tabla1 = new javax.swing.JTable();
         jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -147,7 +148,7 @@ public class PCrearSalas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Select);
-        Select.setBounds(230, 70, 99, 25);
+        Select.setBounds(230, 60, 99, 25);
 
         jButton3.setText("Mostrar Registro");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -242,9 +243,18 @@ public class PCrearSalas extends javax.swing.JFrame {
         getContentPane().add(jButton5);
         jButton5.setBounds(50, 610, 90, 25);
 
+        jButton6.setText("regresar al inicio");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6);
+        jButton6.setBounds(540, 590, 140, 30);
+
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labdatos1/1536318074_444085_1536318195_noticia_normal.jpg"))); // NOI18N
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(0, -110, 960, 770);
+        jLabel6.setBounds(0, -110, 960, 760);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -415,6 +425,12 @@ File sal;
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        Pinicial ventana = new Pinicial();
+        ventana.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -465,6 +481,7 @@ File sal;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;

@@ -5,6 +5,12 @@
  */
 package labdatos1;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,6 +18,8 @@ import javax.swing.JOptionPane;
  * @author Jack Howard Ortega
  */
 public class PEstudiante extends javax.swing.JFrame {
+
+    private String archivo;
 
     /**
      * Creates new form PEstudiante
@@ -36,15 +44,14 @@ public class PEstudiante extends javax.swing.JFrame {
         ecomp = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        bc = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         Ereserva = new javax.swing.JButton();
         Breserva = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -61,6 +68,11 @@ public class PEstudiante extends javax.swing.JFrame {
         getContentPane().add(rcomp, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 55, 62, -1));
 
         jButton3.setText("consultar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 172, 259, -1));
 
         ecomp.setText(" ");
@@ -72,10 +84,15 @@ public class PEstudiante extends javax.swing.JFrame {
         jLabel7.setText("buscar software");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 204, -1, -1));
 
-        jTextField2.setText("escriba programa");
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 227, 259, -1));
+        bc.setText("escriba programa");
+        getContentPane().add(bc, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 227, 259, -1));
 
         jButton4.setText("consultar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 256, 259, -1));
 
         jLabel8.setText("respuesta");
@@ -84,16 +101,15 @@ public class PEstudiante extends javax.swing.JFrame {
         jLabel3.setText("cancelar reserva(numComputador)");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 88, 259, -1));
 
-        jLabel9.setText("disponibilidad de salas");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 288, 259, -1));
-
-        jButton5.setText("consultar");
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 311, 259, -1));
-
         jLabel2.setText(" Reserva de computador (numComputador)");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 31, -1, -1));
 
         Ereserva.setText("cancelar reserva");
+        Ereserva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EreservaActionPerformed(evt);
+            }
+        });
         getContentPane().add(Ereserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 117, 133, -1));
 
         Breserva.setText("reservar computador");
@@ -103,6 +119,14 @@ public class PEstudiante extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Breserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 54, 135, -1));
+
+        jButton1.setText("inicio");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labdatos1/1536318074_444085_1536318195_noticia_normal.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 370));
@@ -128,6 +152,56 @@ public class PEstudiante extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this,"este computador esta ocupada");
         }
     }//GEN-LAST:event_BreservaActionPerformed
+
+    private void EreservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EreservaActionPerformed
+       
+        
+        
+         JOptionPane.showMessageDialog(rootPane, "eliminado exitosamente");
+        
+       
+       
+       
+        
+
+    }//GEN-LAST:event_EreservaActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        String g = rcomp.getText();
+        JOptionPane.showMessageDialog(rootPane, "su computador reservado es"+""+g);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        String prog[] = new String[4];
+        String b=bc.getText();
+        int c=0;
+        prog[0]="netbeans";
+        prog[1]="visualstudio";
+        prog[2]="pseint";
+        for (int i = 0; i < 3; i++) {
+            if(b.equals(prog[i])){
+                 JOptionPane.showMessageDialog(rootPane, "se encontro el programa en los computadores");
+           }else{
+           c=c+1;
+           }
+        }
+                    if(c==3){
+                     JOptionPane.showMessageDialog(rootPane, "no se encontro el programa en los computadores");           
+                    }
+        
+               
+        
+     
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        Pinicial ventana = new Pinicial();
+        ventana.setVisible(true);
+        this.dispose();
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,10 +241,11 @@ public class PEstudiante extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Breserva;
     private javax.swing.JButton Ereserva;
+    private javax.swing.JTextField bc;
     private javax.swing.JTextField ecomp;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -179,8 +254,6 @@ public class PEstudiante extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField rcomp;
     // End of variables declaration//GEN-END:variables
 }

@@ -64,7 +64,7 @@ public class PRegistrarse extends javax.swing.JFrame {
         lblfoto = new javax.swing.JLabel();
         cargarfoto = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        ruta2 = new javax.swing.JTextField();
+        fotoruta = new javax.swing.JTextField();
         Select2 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         Tabla2 = new javax.swing.JTable();
@@ -154,7 +154,7 @@ public class PRegistrarse extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 499, -1, -1));
-        getContentPane().add(ruta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 37, 104, -1));
+        getContentPane().add(fotoruta, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 37, 104, -1));
 
         Select2.setText("Archivo");
         Select2.addActionListener(new java.awt.event.ActionListener() {
@@ -232,9 +232,9 @@ public class PRegistrarse extends javax.swing.JFrame {
                 Object nom = model.getValueAt(i, 0);
                 Object ced = model.getValueAt(i, 1);
                 Object correo = model.getValueAt(i, 2);
-               
+                String foto = fotoruta.getText();
                 
-                bw.write(nom+","+ced+","+correo);
+                bw.write(nom+","+ced+","+correo+","+foto);
                 bw.newLine();
                 
             }
@@ -282,7 +282,7 @@ File fichero;
             
             archivo = fc2.getSelectedFile();
             
-            ruta2.setText(archivo.getAbsolutePath());
+            fotoruta.setText(archivo.getAbsolutePath());
             
             DefaultTableModel model = (DefaultTableModel) Tabla2.getModel();
             try(Scanner s = new Scanner(archivo)){
@@ -294,6 +294,7 @@ File fichero;
                     Integer numS = Integer.parseInt(datos[1]);
                     String sf = datos[2];
                     Integer disp = Integer.parseInt(datos[3]);
+                    
                     
                     
                     model.addRow(new Object[]{nomS,numS,sf,disp});
@@ -409,6 +410,7 @@ File fichero;
     private javax.swing.JButton cargarfoto;
     private javax.swing.JButton eliminar;
     private javax.swing.JFileChooser fc2;
+    private javax.swing.JTextField fotoruta;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
@@ -434,6 +436,5 @@ File fichero;
     private javax.swing.JLabel lblfoto;
     private javax.swing.JButton modificar;
     private javax.swing.JTextField nomU;
-    private javax.swing.JTextField ruta2;
     // End of variables declaration//GEN-END:variables
 }

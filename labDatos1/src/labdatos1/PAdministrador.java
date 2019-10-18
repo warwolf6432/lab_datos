@@ -36,6 +36,7 @@ public class PAdministrador extends javax.swing.JFrame {
         btacceptar = new javax.swing.JButton();
         accepted = new javax.swing.JTextField();
         pwd = new javax.swing.JPasswordField();
+        jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -75,6 +76,14 @@ public class PAdministrador extends javax.swing.JFrame {
         accepted.setEditable(false);
         getContentPane().add(accepted, new org.netbeans.lib.awtextra.AbsoluteConstraints(301, 111, 109, -1));
         getContentPane().add(pwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(301, 32, 109, -1));
+
+        jButton1.setText("inicio");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labdatos1/1536318074_444085_1536318195_noticia_normal.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 150));
@@ -120,6 +129,12 @@ public class PAdministrador extends javax.swing.JFrame {
        
     }//GEN-LAST:event_btacceptarActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+Pinicial ventana = new Pinicial();
+        ventana.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -160,6 +175,7 @@ public class PAdministrador extends javax.swing.JFrame {
     private javax.swing.JButton Baddsala;
     private javax.swing.JTextField accepted;
     private javax.swing.JButton btacceptar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;

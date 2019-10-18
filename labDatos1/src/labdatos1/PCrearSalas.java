@@ -244,7 +244,7 @@ public class PCrearSalas extends javax.swing.JFrame {
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labdatos1/1536318074_444085_1536318195_noticia_normal.jpg"))); // NOI18N
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(0, 10, 950, 650);
+        jLabel6.setBounds(0, -110, 960, 770);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
